@@ -45,11 +45,11 @@ Audio and music generation have emerged as crucial tasks in many applications, y
 ### 🛠️ Environment Setup
 
 ```bash
-git clone https://github.com/ZeyueT/AudioX.git
+git clone https://github.com/DepriPramana/AudioX.git
 cd AudioX
 conda create -n AudioX python=3.8.20
 conda activate AudioX
-pip install git+https://github.com/ZeyueT/AudioX.git
+pip install git+https://github.com/DepriPramana/AudioX.git
 conda install -c conda-forge ffmpeg libsndfile
 
 ```
