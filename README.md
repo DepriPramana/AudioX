@@ -54,10 +54,21 @@ conda install -c conda-forge ffmpeg libsndfile
 
 ```
 
+```
+# CUDA 11.8
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1  pytorch-cuda=11.8 -c pytorch -c nvidia
+# CUDA 12.1
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+# CUDA 12.4
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.4 -c pytorch -c nvidia
+# CPU Only
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 cpuonly -c pytorch
+```
+
 ## 🪄 Pretrained Checkpoints
 
-Download the pretrained model from 🤗 [AudioX on Hugging Face](https://huggingface.co/HKUSTAudio/AudioX):
-
+Download the pretrained model from 🤗 [AudioX on Hugging Face](https://huggingface.co/HKUSTAudio/AudioX/tree/main)):
+https://huggingface.co/HKUSTAudio/AudioX/tree/main
 ```bash
 mkdir -p model
 wget https://huggingface.co/HKUSTAudio/AudioX/resolve/main/model.ckpt -O model/model.ckpt
@@ -69,9 +80,7 @@ wget https://huggingface.co/HKUSTAudio/AudioX/resolve/main/config.json -O model/
 To launch the Gradio demo locally, run:
 
 ```bash
-python3 run_gradio.py \
-    --model-config model/config.json \
-    --share
+python run_gradio.py  --model-config model/config.json --share
 ```
 
 
